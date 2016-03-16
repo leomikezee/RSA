@@ -2,6 +2,7 @@ from converter import int2str, str2int
 from rsamath import randPrime, coPrime, eea
 from rsakey import RSAKey, PublicKey, PrivateKey
 
+# Generate a RSA key-pair; l1 is the length of n and the l2 is the length of e
 def gen(l1, l2):
     p = randPrime(l1 // 2)
     q = randPrime(l1 // 2)
@@ -20,12 +21,14 @@ def gen(l1, l2):
     key = RSAKey(public, private)
     return key
 
+# Encrypt the message
 def en():
     m = str2int(input("Please Enter your message:"))
     e = int(input("Please Enter your e:"))
     n = int(input("Please Enter your n:"))
     return pow(m, e, n)
 
+# Decrypt the message
 def de():
     m = int(input("Please Enter your message:"))
     d = int(input("Please Enter your d:"))

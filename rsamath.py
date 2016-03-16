@@ -16,6 +16,8 @@ def coPrime(a, b):
 def randInt(l):
     return randint(10**(l - 1), 10**l-1)
 
+# Extended Euclid Algorithm
+# https://en.wikibooks.org/wiki/Algorithm_Implementation/Mathematics/Extended_Euclidean_algorithm
 def eea(a, b):
     x,y, u,v = 0,1, 1,0
     while a != 0:
@@ -41,6 +43,7 @@ def nextPrime(p):
 
 # Use Miller-Rabin Primality Test to determine the primality of p
 # K signifies the accuracy of the test
+# https://www.topcoder.com/community/data-science/data-science-tutorials/primality-testing-non-deterministic-algorithms/
 def isPrime(p, k):
     if (p < 2):
         return False

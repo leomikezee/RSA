@@ -1,3 +1,4 @@
+# Convert message to int according to ASCII
 def str2int(Input):
     s = ''
     for c in Input:
@@ -7,6 +8,7 @@ def str2int(Input):
         s = s + temp
     return int(s)
 
+# Convert decrypted int to original message
 def int2str(Input):
     s = ''
     while len(Input) != 0:
